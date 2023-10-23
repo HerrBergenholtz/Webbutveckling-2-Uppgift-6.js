@@ -1,11 +1,8 @@
-
-
-
 //1.
 let answer;
 let min;
 let max;
-let resultat1 = 0;
+let resultat = 0;
 
 alert("Skriv in min och max tal, alla tal mellan max och min kommer att adderas.");
 min = parseInt(prompt("Ange min talet"));
@@ -17,28 +14,34 @@ while (!min || !max) {
     max = parseInt(prompt("Ange max talet"));
 }
 
+resultat = summera(min, max)
+
 function summera(min, max) {
     let i;
 
-    for (i = min; i <= max; i++) { }
+    for (i = min; i <= max; i++) {
+        return resultat = resultat + i;
+    }
+    return resultat;
 }
+alert(resultat);
 
-svar = prompt("Vill du addera kvadraterna av alla tal mellan min och max eller endast addera? ")
+answer = prompt("Vill du addera kvadraterna av alla tal mellan min och max eller endast addera?")
 
-resultat1 = summeraAddera(min, max);
+resultat = summeraKvadrera(min, max);
 
-function summeraAddera(min, max) {
+function summeraKvadrera(min, max) {
 
     let i;
     let kvadratI;
 
     for (i = min; i <= max; i++) {
         kvadratI = kvadrera(i);
-        resultat1 = resultat1 + kvadratI;
+        resultat = resultat + kvadratI;
     }
-    return resultat1;
+    return resultat;
 }
-alert(resultat1);
+alert(resultat);
 
 //2.
 
@@ -94,24 +97,3 @@ function clickConsole() {
     button.style.width = "100%";
 }
 
-
-
-/*
-//3.
-
-let resultat2 = 0;
-let kvadratI;
-
-resultat2 = kvadreraAddera(1, 5);
-
-function kvadreraAddera(min, max) {
-    let i;
-
-    for (i = min; i <= max; i++) {
-        //kvadratI = kvadrera(i);
-        resultat2 = resultat2 + i * i;
-    }
-    return resultat2;
-}
-alert(resultat2);
-*/
