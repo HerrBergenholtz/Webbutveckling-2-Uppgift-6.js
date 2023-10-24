@@ -14,37 +14,40 @@ while (!min || !max) {
     max = parseInt(prompt("Ange max talet"));
 }
 
-resultat = summera(min, max)
+resultat = summera(min, max);
 
 function summera(min, max) {
     let i;
 
     for (i = min; i <= max; i++) {
-        return resultat = resultat + i;
+        resultat = resultat + i;
     }
     return resultat;
 }
 alert(resultat);
 
-answer = prompt("Vill du addera kvadraterna av alla tal mellan min och max eller endast addera?")
+//4.
+answer = window.confirm("Vill du även addera kvadraten av alla tal mellan min och max?");
 
-resultat = summeraKvadrera(min, max);
+if (answer == true) {
+    resultat = 0;
 
-function summeraKvadrera(min, max) {
+    resultat = kvadreraSummera(min, max);
 
-    let i;
-    let kvadratI;
+    function kvadreraSummera(min, max) {
+        let i;
+        let kvadratI;
 
-    for (i = min; i <= max; i++) {
-        kvadratI = kvadrera(i);
-        resultat = resultat + kvadratI;
+        for (i = min; i <= max; i++) {
+            kvadratI = kvadrera(i);
+            resultat = resultat + kvadratI;
+        }
+        return resultat;
     }
-    return resultat;
+    alert(resultat);
 }
-alert(resultat);
 
 //2.
-
 const kvadratTal = parseInt(prompt("Ange ett tal som ska kvadreras"));
 const kvadraten = kvadrera(kvadratTal);
 
@@ -52,21 +55,17 @@ function kvadrera(kvadratTal) {
     return kvadratTal * kvadratTal;
 }
 
-
 alert(kvadraten);
 
 //4.
-
 const ord = prompt("Skriv in ett ord");
 
 palindrome = reverse(ord);
 
 function reverse(str) {
-
     const splitStr = str.split("");
     const reverseStr = splitStr.reverse();
     const joinStr = reverseStr.join("");
-
     return joinStr;
 }
 
@@ -78,7 +77,6 @@ if (ord == palindrome) {
 
 
 //5.
-//button.addEventListener("click", clickConsole);
 let img;
 let button;
 
@@ -90,10 +88,9 @@ function init() {
 window.onload = init;
 
 function clickConsole() {
-    button.innerHTML = "<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores nobis nihil perspiciatis at maiores quisquam laudantium? Nemo, blanditiis cupiditate laborum nisi dolor cum beatae repellendus!</p>"
+    button.innerHTML = "<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores nobis nihil perspiciatis at maiores quisquam laudantium? Nemo, blanditiis cupiditate laborum nisi dolor cum beatae repellendus!</p>";
     img.style.display = "block";
     button.style.color = "red";
     button.style.height = "50px";
     button.style.width = "100%";
 }
-
