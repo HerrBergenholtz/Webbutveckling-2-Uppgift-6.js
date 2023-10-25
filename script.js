@@ -1,5 +1,4 @@
 //1.
-let answer;
 let min;
 let max;
 let resultat = 0;
@@ -27,6 +26,8 @@ function summera(min, max) {
 alert(resultat);
 
 //4.
+let answer;
+
 answer = window.confirm("Vill du även addera kvadraten av alla tal mellan min och max?");
 
 if (answer == true) {
@@ -54,7 +55,6 @@ const kvadraten = kvadrera(kvadratTal);
 function kvadrera(kvadratTal) {
     return kvadratTal * kvadratTal;
 }
-
 alert(kvadraten);
 
 //4.
